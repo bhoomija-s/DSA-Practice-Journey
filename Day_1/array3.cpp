@@ -11,9 +11,9 @@ int main (){
             ndmax = max;
             max = arr[i];
         }
-       else if(arr[i]>ndmax && arr[i]<max)
-        ndmax=arr[i];
+    
     }
     cout<<"second max"<<ndmax;
+
 
 }
