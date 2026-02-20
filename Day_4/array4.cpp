@@ -1,0 +1,34 @@
+//Rotate array left by k positions (using temporary array)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int n = 7;
+    int k = 3;
+
+    k = k % n; 
+
+    int temp[k];
+
+    
+    for (int i = 0; i < k; i++) {
+        temp[i] = arr[i];
+    }
+
+    for (int i = k; i < n; i++) {
+        arr[i - k] = arr[i];
+    }
+
+    for (int i = 0; i < k; i++) {
+        arr[n - k + i] = temp[i];
+    }
+
+    cout << "Array after left rotation: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}
